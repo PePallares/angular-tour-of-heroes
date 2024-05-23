@@ -1,0 +1,13 @@
+<div *ngIf="messageService.messages.length" class="side-nav">
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+      <h2>Messages</h2>
+      <button type="button" class="clear" (click)="messageService.clear()">
+        Clear messages
+      </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div *ngFor="let message of messageService.messages.reverse()">{{ message }}</div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

@@ -6,8 +6,8 @@ import {
    debounceTime, distinctUntilChanged, switchMap
  } from 'rxjs/operators';
 
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+import { Hero } from '../../../model/hero';
+import { HeroService } from '../../../services/hero/hero.service';
 import { AsyncPipe, NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location, NgIf, UpperCasePipe } from '@angular/common';
 
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+import { Hero } from '../../../model/hero';
+import { HeroService } from '../../../services/hero/hero.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
