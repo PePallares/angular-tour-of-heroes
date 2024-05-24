@@ -4,11 +4,12 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { MessagesComponent } from './shared/components/messages/messages.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MessagesComponent, RouterLink, RouterLinkActive, MatSidenavModule, MatToolbarModule, MatListModule],
+  imports: [RouterOutlet, MessagesComponent, RouterLink, RouterLinkActive, MatSidenavModule, MatToolbarModule, MatListModule, MatDividerModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

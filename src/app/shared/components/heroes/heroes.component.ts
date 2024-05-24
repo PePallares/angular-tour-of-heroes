@@ -4,11 +4,12 @@ import { Hero } from '../../../model/hero';
 import { HeroService } from '../../../services/hero/hero.service';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-heroes',
   standalone: true,
-  imports: [NgFor, RouterLink],
+  imports: [NgFor, RouterLink, MatCardModule],
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.scss']
 })
