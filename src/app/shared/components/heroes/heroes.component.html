@@ -2,11 +2,12 @@
   <mat-card-header>
     <mat-card-title>
       <h2>Heroes</h2>
+      <input #searchBox id="search-box" (input)="search(searchBox.value)" />
     </mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <ul class="heroes">
-      <li *ngFor="let hero of heroes">
+      <li *ngFor="let hero of heroes$ | async">
         <a routerLink="/detail/{{ hero.id }}">
           <span class="badge">{{ hero.id }}</span> {{ hero.name }}
         </a>
@@ -23,7 +24,7 @@
   </mat-card-content>
 </mat-card>
 
-<mat-card>
+<!-- <mat-card>
   <mat-card-content>
     <label for="new-hero">Hero name: </label>
     <input id="new-hero" #heroName />
@@ -35,4 +36,4 @@
       Add hero
     </button>
   </mat-card-content>
-</mat-card>
+</mat-card> -->

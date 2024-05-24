@@ -8,6 +8,7 @@ display: block;
 align-items: flex-start;
 overflow-y: hidden;
 text-align: center;
+color: #fff;
 }
 
 mat-nav-list-item {
@@ -32,10 +33,6 @@ mat-nav-list a {
 }
 
 mat-nav-list a:hover {
-  color: #fff;
-  background-color: black;
-}
-mat-nav-list a:active {
   color: #fff;
   background-color: black;
 }
