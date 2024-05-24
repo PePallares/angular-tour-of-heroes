@@ -27,7 +27,7 @@ export const appConfig: ApplicationConfig = {
       HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService)
     ), provideAnimationsAsync(), provideFirebaseApp(() => initializeApp({"projectId":"tour-of-heroes-dc3f6","appId":"1:936637327018:web:f5441214888324437412d3","storageBucket":"tour-of-heroes-dc3f6.appspot.com","apiKey":"AIzaSyCKE8R0OWyFPVTmZwFPYgQMevwURU5h4E4","authDomain":"tour-of-heroes-dc3f6.firebaseapp.com","messagingSenderId":"936637327018","measurementId":"G-MRTP5G3W41"})), provideAuth(() => getAuth()), provideAnalytics(() => getAnalytics()), ScreenTrackingService, UserTrackingService, provideAppCheck(() => {
   // TODO get a reCAPTCHA Enterprise here https://console.cloud.google.com/security/recaptcha?project=_
-  const provider = new ReCaptchaEnterpriseProvider(/* reCAPTCHA Enterprise site key */);
+  const provider = new ReCaptchaEnterpriseProvider(''); /* reCAPTCHA Enterprise site key */
   return initializeAppCheck(undefined, { provider, isTokenAutoRefreshEnabled: true });
 }), provideFirestore(() => getFirestore()), provideDatabase(() => getDatabase()), provideFunctions(() => getFunctions()), provideMessaging(() => getMessaging()), providePerformance(() => getPerformance()), provideStorage(() => getStorage()), provideRemoteConfig(() => getRemoteConfig()), provideVertexAI(() => getVertexAI()),
   ],
