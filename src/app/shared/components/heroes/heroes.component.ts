@@ -22,10 +22,8 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit(): void {
     this.heroes$ = this.searchTerms.pipe(
-      //debounceTime(25),
-
+      debounceTime(25),
       distinctUntilChanged(),
-
       switchMap((term: string) => this.heroService.getFilteredHeroes(term)))
   };
 
@@ -47,8 +45,11 @@ export class HeroesComponent implements OnInit {
   // }
 
    delete(hero: Hero): void {
-     this.heroService.deleteHero(hero.id).subscribe();
-     this.search('');
+     this.heroService.deleteHero(hero.id).subscribe(
+      () =>{      
+        this.search('');
+      }
+     );
    }
 
 }
