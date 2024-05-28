@@ -1,14 +1,17 @@
 <mat-toolbar>
   <span>{{ title }}</span>
 </mat-toolbar>
-
 <mat-divider></mat-divider>
 
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav class="sidenav" mode="side" opened>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
     <mat-nav-list>
-      <mat-list-item routerLink="/dashboard" routerLinkActive="active-list-item">Dashboard </mat-list-item>
-      <mat-list-item routerLink="/heroes" routerLinkActive="active-list-item">Heroes </mat-list-item>
+      <mat-list-item routerLink="/dashboard" routerLinkActive="active-list-item"
+        >Dashboard
+      </mat-list-item>
+      <mat-list-item routerLink="/heroes" routerLinkActive="active-list-item"
+        >Heroes
+      </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

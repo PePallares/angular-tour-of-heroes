@@ -23,7 +23,7 @@ button {
 button {
   background-color: #eee;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   color: black;
   font-size: 1.2rem;
@@ -41,26 +41,6 @@ button:disabled {
   color: #aaa;
   cursor: auto;
 }
-
-// mat-nav-list .mdc-list-item__primary-text {
-//   color: white;
-// }
-
-// mat-nav-list .mdc-list-item__primary-text :hover {
-//   color: white;
-// }
-
-// mat-nav-list .mdc-list-item__primary-text :focus {
-//   color: white;
-// }
-
-// .active-list-item .mdc-list-item__primary-text :hover{
-//   color: white;
-// }
-
-// .active-list-item .mdc-list-item__primary-text :hover{
-//   color: white;
-// }
 
 /* everywhere else */
 * {

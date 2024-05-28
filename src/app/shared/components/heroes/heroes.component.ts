@@ -46,7 +46,7 @@ export class HeroesComponent implements OnInit {
 
    delete(hero: Hero): void {
      this.heroService.deleteHero(hero.id).subscribe(
-      (response) =>{      
+      (response: Hero) =>{      
         this.search('');
       }
      );

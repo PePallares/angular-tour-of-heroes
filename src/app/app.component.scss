@@ -1,6 +1,24 @@
-/* AppComponent's private CSS styles */
 h1 {
   margin-bottom: 0;
+}
+
+mat-sidenav-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  flex-grow: 1;
+}
+
+mat-sidenav{
+  display: block;
+  align-items: center;
+  padding: 1rem;
+  min-height: fit-content;
+  height: 100vh;
+}
+
+mat-sidenav-content{
+  background-color: white;
 }
 
 mat-nav-list {
@@ -14,9 +32,13 @@ mat-nav-list {
 mat-list-item {
   align-items: center;
   justify-content: center;
-  background-color: transparent;
   font-weight: bold;
   margin-bottom: 0.1rem;
+}
+
+.mat-mdc-nav-list .mat-mdc-list-item 
+{
+  border-radius: 10px;
 }
 
 .active-list-item {
@@ -43,18 +65,7 @@ mat-toolbar span {
   height: 15%;
 }
 
-.sidenav {
-  display: block;
-  align-items: center;
-  padding: 1rem;
-  overflow-y: hidden;
-}
-
 mat-divider {
   margin-inline: 1rem;
   margin-bottom: 0.5rem;
-}
-
-.sidenav-container {
-  background-color: white;
 }
