@@ -4,45 +4,24 @@ h1 {
 }
 
 mat-nav-list {
-display: block;
-align-items: flex-start;
-overflow-y: hidden;
-text-align: center;
-color: #fff;
+  display: block;
+  align-items: flex-start;
+  overflow-y: hidden;
+  text-align: center;
+  justify-content: center;
 }
 
-mat-nav-list-item {
-  display: flex;
-  padding-left: 16px;
-  padding-right: 16px;
-  align-items: stretch;
-  box-sizing: border-box;
-  }
-
-mat-nav-list a {
-  padding: 1rem;
-  margin-bottom: 0.2rem;
-  display: flex;
-  background-color: #3f525c;
-  color: #fff;
-  border-radius: 10px;
-  width: 100%;
-  justify-content: flex-start;
+mat-list-item {
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
   font-weight: bold;
-  box-sizing: border-box;
-}
-
-mat-nav-list a:hover {
-  color: #fff;
-  background-color: black;
+  margin-bottom: 0.1rem;
 }
 
 .active-list-item {
-  color: #fff;
-  background-color: #f5f5f5;
-  font-weight: bold;
+  background-color: #EEEEEE;
 }
-
 
 mat-toolbar {
   display: flex;
@@ -71,11 +50,11 @@ mat-toolbar span {
   overflow-y: hidden;
 }
 
-mat-divider{
+mat-divider {
   margin-inline: 1rem;
   margin-bottom: 0.5rem;
 }
 
-.sidenav-container{
+.sidenav-container {
   background-color: white;
 }
