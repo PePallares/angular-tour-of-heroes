@@ -1,16 +1,30 @@
 <mat-toolbar>
   <span>{{ title }}</span>
-  <span style="text-align: right" (click)="logout()">Logout</span>
+  <div class="logout">
+    <button mat-icon-button [matMenuTriggerFor]="menu" *ngIf="isLoggedIn$ | async as isLoggedIn">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item class="logout" (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+  </div>
 </mat-toolbar>
 <mat-divider></mat-divider>
 
 <mat-sidenav-container>
-  <mat-sidenav mode="side" opened>
+  <mat-sidenav mode="side" opened *ngIf="isLoggedIn$ | async as isLoggedIn">
     <mat-nav-list>
-      <mat-list-item routerLink="private/dashboard" routerLinkActive="active-list-item"
+      <mat-list-item
+        routerLink="private/dashboard"
+        routerLinkActive="active-list-item"
         >Dashboard
       </mat-list-item>
-      <mat-list-item routerLink="private/heroes" routerLinkActive="active-list-item"
+      <mat-list-item
+        routerLink="private/heroes"
+        routerLinkActive="active-list-item"
         >Heroes
       </mat-list-item>
     </mat-nav-list>
@@ -20,4 +34,4 @@
   </mat-sidenav-content>
 </mat-sidenav-container>
 
-<app-messages></app-messages>
+<app-messages *ngIf="isLoggedIn$ | async as isLoggedIn"></app-messages>

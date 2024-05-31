@@ -69,3 +69,12 @@ mat-divider {
   margin-inline: 1rem;
   margin-bottom: 0.5rem;
 }
+
+mat-toolbar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout{
+  float: right;
+}

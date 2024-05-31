@@ -40,7 +40,7 @@ export class LoginComponent {
     const user = await this.authService.register(this.credentials.value);
 
     if (user) {
-      this.router.navigateByUrl('/private/dashboard', { replaceUrl: true });
+      this.router.navigateByUrl('/private/home', { replaceUrl: true });
     } else {
       console.log('Registration failed', 'Please try again!');
     }
