@@ -1,15 +1,16 @@
 <mat-toolbar>
   <span>{{ title }}</span>
+  <span style="text-align: right" (click)="logout()">Logout</span>
 </mat-toolbar>
 <mat-divider></mat-divider>
 
 <mat-sidenav-container>
   <mat-sidenav mode="side" opened>
     <mat-nav-list>
-      <mat-list-item routerLink="/dashboard" routerLinkActive="active-list-item"
+      <mat-list-item routerLink="private/dashboard" routerLinkActive="active-list-item"
         >Dashboard
       </mat-list-item>
-      <mat-list-item routerLink="/heroes" routerLinkActive="active-list-item"
+      <mat-list-item routerLink="private/heroes" routerLinkActive="active-list-item"
         >Heroes
       </mat-list-item>
     </mat-nav-list>

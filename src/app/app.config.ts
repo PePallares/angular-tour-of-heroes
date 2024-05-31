@@ -54,16 +54,6 @@ export const appConfig: ApplicationConfig = {
     provideAnalytics(() => getAnalytics()),
     ScreenTrackingService,
     UserTrackingService,
-    provideAppCheck(() => {
-      // TODO get a reCAPTCHA Enterprise here https://console.cloud.google.com/security/recaptcha?project=_
-      const provider = new ReCaptchaEnterpriseProvider(
-        ''
-      ); /* reCAPTCHA Enterprise site key */
-      return initializeAppCheck(undefined, {
-        provider,
-        isTokenAutoRefreshEnabled: true,
-      });
-    }),
     provideFirestore(() => getFirestore()),
     provideDatabase(() => getDatabase()),
     provideFunctions(() => getFunctions()),
